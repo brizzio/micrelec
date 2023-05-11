@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "colName": "fiscal",
+    "created": "2023-05-10T10:18:44.323Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "9e23612b-e75b-4b7c-a5c0-867c3036648c",
+    "colName": "COMANDI DI STAMPA",
+    "created": "2023-05-11T09:39:49.497Z",
+    "sortNum": 20000,
+    "folders": []
+  }
+]

@@ -1,0 +1,441 @@
+[
+  {
+    "_id": "03d2aa55-cbae-4762-9807-9bb21b5df807",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "DISP_WRITE",
+    "url": "http://{{ip}}/_io?cmd=1&ln1=Grazie&ln2=Arrivederci",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-05-10T10:19:45.110Z",
+    "modified": "2023-05-10T13:45:43.590Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "ln1",
+        "value": "Grazie",
+        "isPath": false
+      },
+      {
+        "name": "ln2",
+        "value": "Arrivederci",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "462aff85-2939-4c1f-b13c-dcf7784f6ad2",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "STATUS",
+    "url": "http://{{ip}}/_io?cmd=0",
+    "method": "GET",
+    "sortNum": 5000,
+    "created": "2023-05-10T10:24:50.411Z",
+    "modified": "2023-05-10T10:31:35.975Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "0",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "305128e7-4b30-446e-b09d-654d67d6e492",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "KEYB_WRITE",
+    "url": "http://{{ip}}/_io?cmd=3&code=26",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-05-10T10:27:52.809Z",
+    "modified": "2023-05-10T15:41:25.533Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "3",
+        "isPath": false
+      },
+      {
+        "name": "code",
+        "value": "26",
+        "isPath": false
+      },
+      {
+        "name": "idx",
+        "value": "",
+        "isDisabled": true,
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "# codici tastiera\n\n| SHIFT  | 5  | N8 | 7  | N2    | 19 | DELETE  | 22 |\n|--------|----|----|----|-------|----|---------|----|\n| ESC    | 9  | N9 | 8  | N3    | 20 | CLEAR   | 28 |\n| LEFT   | 25 | N4 | 12 | N0    | 24 | DEFAULT | 27 |\n| RIGHT  | 26 | N5 | 13 | N00   | 25 |         |    |\n| CHIAVE | 0  | N6 | 14 | COMMA | 26 |         |    |\n|  N7  | 6   | N1   |  18  |  OK  | 29   |         |    |\n"
+  },
+  {
+    "_id": "973d8b4a-de75-4b49-8c99-57bc880608a7",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "OPER_WRITE",
+    "url": "http://{{ip}}/_fileio?cmd=3",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-05-10T10:32:25.820Z",
+    "modified": "2023-05-10T14:54:41.540Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "3",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "# SEND TICKET CMD \n\n### Si tratta di una POST request dove è possibile caricare nel body vari comandi protocollati separati da CR+LF. La funzione esegue solo il\ncaricamento del buffer dei comandi, per eseguire i comandi bufferizzati utilizzare TICKET_CMD . \n\nCarica più comandi protocollo SF20 per la successiva stampa.\n\n\n"
+  },
+  {
+    "_id": "7ce6a5bf-6872-436a-ba47-8aa27f897eee",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "PROTO_CMD",
+    "url": "http://{{ip}}/_io?cmd=4&js=1&pkt=%70/%71",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-05-10T10:33:34.634Z",
+    "modified": "2023-05-10T14:48:10.536Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "%70/%71",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "## Invia comando protocollo SF20 \n\n\nASCII Encoding Reference\nYour browser will encode input, according to the character-set used in your page.\n\nThe default character-set in HTML5 is UTF-8.\n\n| Character | From Windows-1252 | From UTF-8 |\n|-----------|-------------------|------------|\n| space     | %20               | %20        |\n| !         | %21               | %21        |\n| \"         | %22               | %22        |\n| #         | %23               | %23        |\n| $         | %24               | %24        |\n| %         | %25               | %25        |\n| &         | %26               | %26        |\n| '         | %27               | %27        |\n| (         | %28               | %28        |\n| )         | %29               | %29        |\n| *         | %2A               | %2A        |\n| +         | %2B               | %2B        |\n| ,         | %2C               | %2C        |\n| -         | %2D               | %2D        |\n| .         | %2E               | %2E        |\n| /         | %2F               | %2F        |\n| 0         | %30               | %30        |\n| 1         | %31               | %31        |\n| 2         | %32               | %32        |\n| 3         | %33               | %33        |\n| 4         | %34               | %34        |\n| 5         | %35               | %35        |\n| 6         | %36               | %36        |\n| 7         | %37               | %37        |\n| 8         | %38               | %38        |\n| 9         | %39               | %39        |\n| :         | %3A               | %3A        |\n| ;         | %3B               | %3B        |\n| <         | %3C               | %3C        |\n| =         | %3D               | %3D        |\n| >         | %3E               | %3E        |\n| ?         | %3F               | %3F        |\n| @         | %40               | %40        |\n| A         | %41               | %41        |\n| B         | %42               | %42        |\n| C         | %43               | %43        |\n| D         | %44               | %44        |\n| E         | %45               | %45        |\n| F         | %46               | %46        |\n| G         | %47               | %47        |\n| H         | %48               | %48        |\n| I         | %49               | %49        |\n| J         | %4A               | %4A        |\n| K         | %4B               | %4B        |\n| L         | %4C               | %4C        |\n| M         | %4D               | %4D        |\n| N         | %4E               | %4E        |\n| O         | %4F               | %4F        |\n| P         | %50               | %50        |\n| Q         | %51               | %51        |\n| R         | %52               | %52        |\n| S         | %53               | %53        |\n| T         | %54               | %54        |\n| U         | %55               | %55        |\n| V         | %56               | %56        |\n| W         | %57               | %57        |\n| X         | %58               | %58        |\n| Y         | %59               | %59        |\n| Z         | %5A               | %5A        |\n| [         | %5B               | %5B        |\n| \\         | %5C               | %5C        |\n| ]         | %5D               | %5D        |\n| ^         | %5E               | %5E        |\n| _         | %5F               | %5F        |\n| `         | %60               | %60        |\n| a         | %61               | %61        |\n| b         | %62               | %62        |\n| c         | %63               | %63        |\n| d         | %64               | %64        |\n| e         | %65               | %65        |\n| f         | %66               | %66        |\n| g         | %67               | %67        |\n| h         | %68               | %68        |\n| i         | %69               | %69        |\n| j         | %6A               | %6A        |\n| k         | %6B               | %6B        |\n| l         | %6C               | %6C        |\n| m         | %6D               | %6D        |\n| n         | %6E               | %6E        |\n| o         | %6F               | %6F        |\n| p         | %70               | %70        |\n| q         | %71               | %71        |\n| r         | %72               | %72        |\n| s         | %73               | %73        |\n| t         | %74               | %74        |\n| u         | %75               | %75        |\n| v         | %76               | %76        |\n| w         | %77               | %77        |\n| x         | %78               | %78        |\n| y         | %79               | %79        |\n| z         | %7A               | %7A        |\n| {         | %7B               | %7B        |\n| \\|        | %7C               | %7C        |\n| }         | %7D               | %7D        |\n| ~         | %7E               | %7E        |\n|           | %7F               | %7F        |\n| €         | %80               | %E2%82%AC  |\n|           | %81               | %81        |\n| ‚         | %82               | %E2%80%9A  |\n| ƒ         | %83               | %C6%92     |\n| „         | %84               | %E2%80%9E  |\n| …         | %85               | %E2%80%A6  |\n| †         | %86               | %E2%80%A0  |\n| ‡         | %87               | %E2%80%A1  |\n| ˆ         | %88               | %CB%86     |\n| ‰         | %89               | %E2%80%B0  |\n| Š         | %8A               | %C5%A0     |\n| ‹         | %8B               | %E2%80%B9  |\n| Œ         | %8C               | %C5%92     |\n|           | %8D               | %C5%8D     |\n| Ž         | %8E               | %C5%BD     |\n|           | %8F               | %8F        |\n|           | %90               | %C2%90     |\n| ‘         | %91               | %E2%80%98  |\n| ’         | %92               | %E2%80%99  |\n| “         | %93               | %E2%80%9C  |\n| ”         | %94               | %E2%80%9D  |\n| •         | %95               | %E2%80%A2  |\n| –         | %96               | %E2%80%93  |\n| —         | %97               | %E2%80%94  |\n| ˜         | %98               | %CB%9C     |\n| ™         | %99               | %E2%84     |\n| š         | %9A               | %C5%A1     |\n| ›         | %9B               | %E2%80     |\n| œ         | %9C               | %C5%93     |\n|           | %9D               | %9D        |\n| ž         | %9E               | %C5%BE     |\n| Ÿ         | %9F               | %C5%B8     |\n|           | %A0               | %C2%A0     |\n| ¡         | %A1               | %C2%A1     |\n| ¢         | %A2               | %C2%A2     |\n| £         | %A3               | %C2%A3     |\n| ¤         | %A4               | %C2%A4     |\n| ¥         | %A5               | %C2%A5     |\n| ¦         | %A6               | %C2%A6     |\n| §         | %A7               | %C2%A7     |\n| ¨         | %A8               | %C2%A8     |\n| ©         | %A9               | %C2%A9     |\n| ª         | %AA               | %C2%AA     |\n| «         | %AB               | %C2%AB     |\n| ¬         | %AC               | %C2%AC     |\n| ­         | %AD               | %C2%AD     |\n| ®         | %AE               | %C2%AE     |\n| ¯         | %AF               | %C2%AF     |\n| °         | %B0               | %C2%B0     |\n| ±         | %B1               | %C2%B1     |\n| ²         | %B2               | %C2%B2     |\n| ³         | %B3               | %C2%B3     |\n| ´         | %B4               | %C2%B4     |\n| µ         | %B5               | %C2%B5     |\n| ¶         | %B6               | %C2%B6     |\n| ·         | %B7               | %C2%B7     |\n| ¸         | %B8               | %C2%B8     |\n| ¹         | %B9               | %C2%B9     |\n| º         | %BA               | %C2%BA     |\n| »         | %BB               | %C2%BB     |\n| ¼         | %BC               | %C2%BC     |\n| ½         | %BD               | %C2%BD     |\n| ¾         | %BE               | %C2%BE     |\n| ¿         | %BF               | %C2%BF     |\n| À         | %C0               | %C3%80     |\n| Á         | %C1               | %C3%81     |\n| Â         | %C2               | %C3%82     |\n| Ã         | %C3               | %C3%83     |\n| Ä         | %C4               | %C3%84     |\n| Å         | %C5               | %C3%85     |\n| Æ         | %C6               | %C3%86     |\n| Ç         | %C7               | %C3%87     |\n| È         | %C8               | %C3%88     |\n| É         | %C9               | %C3%89     |\n| Ê         | %CA               | %C3%8A     |\n| Ë         | %CB               | %C3%8B     |\n| Ì         | %CC               | %C3%8C     |\n| Í         | %CD               | %C3%8D     |\n| Î         | %CE               | %C3%8E     |\n| Ï         | %CF               | %C3%8F     |\n| Ð         | %D0               | %C3%90     |\n| Ñ         | %D1               | %C3%91     |\n| Ò         | %D2               | %C3%92     |\n| Ó         | %D3               | %C3%93     |\n| Ô         | %D4               | %C3%94     |\n| Õ         | %D5               | %C3%95     |\n| Ö         | %D6               | %C3%96     |\n| ×         | %D7               | %C3%97     |\n| Ø         | %D8               | %C3%98     |\n| Ù         | %D9               | %C3%99     |\n| Ú         | %DA               | %C3%9A     |\n| Û         | %DB               | %C3%9B     |\n| Ü         | %DC               | %C3%9C     |\n| Ý         | %DD               | %C3%9D     |\n| Þ         | %DE               | %C3%9E     |\n| ß         | %DF               | %C3%9F     |\n| à         | %E0               | %C3%A0     |\n| á         | %E1               | %C3%A1     |\n| â         | %E2               | %C3%A2     |\n| ã         | %E3               | %C3%A3     |\n| ä         | %E4               | %C3%A4     |\n| å         | %E5               | %C3%A5     |\n| æ         | %E6               | %C3%A6     |\n| ç         | %E7               | %C3%A7     |\n| è         | %E8               | %C3%A8     |\n| é         | %E9               | %C3%A9     |\n| ê         | %EA               | %C3%AA     |\n| ë         | %EB               | %C3%AB     |\n| ì         | %EC               | %C3%AC     |\n| í         | %ED               | %C3%AD     |\n| î         | %EE               | %C3%AE     |\n| ï         | %EF               | %C3%AF     |\n| ð         | %F0               | %C3%B0     |\n| ñ         | %F1               | %C3%B1     |\n| ò         | %F2               | %C3%B2     |\n| ó         | %F3               | %C3%B3     |\n| ô         | %F4               | %C3%B4     |\n| õ         | %F5               | %C3%B5     |\n| ö         | %F6               | %C3%B6     |\n| ÷         | %F7               | %C3%B7     |\n| ø         | %F8               | %C3%B8     |\n| ù         | %F9               | %C3%B9     |\n| ú         | %FA               | %C3%BA     |\n| û         | %FB               | %C3%BB     |\n| ü         | %FC               | %C3%BC     |\n| ý         | %FD               | %C3%BD     |\n| þ         | %FE               | %C3%BE     |\n| ÿ         | %FF               | %C3%BF     |"
+  },
+  {
+    "_id": "2bbe2364-adc1-4586-a763-b9893bc967bc",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "PROTO_CMD Copy",
+    "url": "http://{{ip}}/_fileio?cmd=3",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-05-10T10:35:00.685Z",
+    "modified": "2023-05-10T10:38:53.151Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "3",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "Display/Tastiera/Protocollo\nFunzione Descrizione Sintassi URL\nSTATUS [GET] Ottieni informazioni sullo stato del \nregistratore fiscale\n/_io?cmd=0\nDISP_WRITE\n[GET]\nInvia stringhe ai display (operatore e \ncliente)\n/_io?cmd=1&ln1=<text>&ln2=<text>\nKEYB_WRITE\n[GET]\nInvia codice tastiera /_io?cmd=2&code=<N>\nOPER_WRITE\n[GET]\nInvia tasto funzione /_io?cmd=3&code=<N>&idx=<M>\nPROTO_CMD [GET] Invia comando protocollo SF20 /_io?cmd=4&js=<0/1>&pkt=<packet>\n\nSEND_TICKET_CMD\n[POST]\nCarica più comandi protocollo SF20 per \nla successiva stampa.\n/_fileio?cmd=3\nTICKET_CMD\n[GET]\nEsegui la sequenza di comandi \nprecedentemente caricati con \nSEND_TICKET_CMD\n/_io?cmd=5&js=<0/1>"
+  },
+  {
+    "_id": "f41ac35f-d581-4421-b901-e4f1cc390bbe",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "TICKET_CMD",
+    "url": "http://{{ip}}/_io?cmd=5&js=1",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-05-10T10:36:47.853Z",
+    "modified": "2023-05-10T14:57:32.968Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "5",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "# TICKET_CMD\n\n\n## Esegui la sequenza di comandi precedentemente caricati con SEND_TICKET_CMD\n\n\n### Esegue la sequenza di comandi precedentemente inviata tramite SEND_TICKET_CMD. La risposta al protocollo SF20 viene restituita senza ulteriori caratteri se l’attributo “js”=0, se invece “js”=1 viene incapsulata in un oggetto JSON (attributo “response”). La struttura della reply sarà la stessa ottenuta dalle funzioni protocollari di accodamento (q/4, q/5 e q/6). La reply corrisponderà quindi alla struttura della reply del comando q/6 spedito a fine bufferizzazione. In caso di esito positivo si avrà un messaggio di conferma, nel caso di errore verrà riportato l’error code e il numero di linea che ha generato l’errore stesso.\n\n\n\n"
+  },
+  {
+    "_id": "e93e72b7-4241-4999-a92e-62cb6635a99b",
+    "colId": "9e23612b-e75b-4b7c-a5c0-867c3036648c",
+    "containerId": "",
+    "name": "AGGIUNGI ARTICOLO",
+    "url": "http://{{ip}}/_io?cmd=4&js=1&pkt=3%2FS%2FDESCRIZIONE%2FINFO%20AGGIUNTIVE%2F1.000%2F100.00%2F1%2F4%2F%2F0%2F0%2F",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-05-10T10:41:30.721Z",
+    "modified": "2023-05-11T09:39:54.495Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "3%2FS%2FCaffe%2Fmacchiato%2F1%2F0.80%2F1%2F",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "3%2FS%2FDESCRIZIONE%2FINFO%20AGGIUNTIVE%2F1.000%2F100.00%2F1%2F4%2F%2F0%2F0%2F",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "3%2FS%2FCaffe%2F1%2F1%2F0.80%2F1%2F\n\n3- request code\n\n'S' per le operazioni di \nvendita positiva\n'V' per le operazioni di\ninserimento linee in un \ndocumento commerciale di \nANNULLO\n'R' per le operazioni di\nstorno\n'N' per le operazioni di \ninserimento linee in un \ndocumento commerciale di RESO\n‘M’ per le operazioni di \ngestione dei BUONI MONOUSO\n‘B’ per le operazioni di \ngestione dell’ACCONTO\n‘G’ per la gestione delle \noperazioni di OMAGGIO\n\nFIELD 3 Descrizione STRING 1-30 \nchars\nDescrizione dell’operazione\n\nFIELD 4 Descrizione \naggiuntiva/estesa\nSTRING 0-30 \nchars\nLinea descrittiva aggiuntiva \nstampata sotto alla linea \ndescrittiva principale. \n(field facoltativo)\n\n"
+  },
+  {
+    "_id": "1a2a7794-68bd-483e-bee1-6648767832c2",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "CLOSE CART",
+    "url": "http://{{ip}}/_io?cmd=4&js=1&pkt=5%2F1%2F1.00%2F%2F%2F%2FPC%2F%2F%2F",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2023-05-10T10:51:13.571Z",
+    "modified": "2023-05-11T09:57:45.802Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "5%2F1%2F1.00%2F%2F%2F%2FPC%2F%2F%2F",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "3%2FS%2FCaffe%2F1%2F1%2F0.80%2F1%2F\n\n3- request code\n\n'S' per le operazioni di \nvendita positiva\n'V' per le operazioni di\ninserimento linee in un \ndocumento commerciale di \nANNULLO\n'R' per le operazioni di\nstorno\n'N' per le operazioni di \ninserimento linee in un \ndocumento commerciale di RESO\n‘M’ per le operazioni di \ngestione dei BUONI MONOUSO\n‘B’ per le operazioni di \ngestione dell’ACCONTO\n‘G’ per la gestione delle \noperazioni di OMAGGIO\n\nFIELD 3 Descrizione STRING 1-30 \nchars\nDescrizione dell’operazione\n\nFIELD 4 Descrizione \naggiuntiva/estesa\nSTRING 0-30 \nchars\nLinea descrittiva aggiuntiva \nstampata sotto alla linea \ndescrittiva principale. \n(field facoltativo)\n\n"
+  },
+  {
+    "_id": "c859af7b-03a4-46e5-befa-8c2b9de15510",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "SEND TICKET_CMD",
+    "url": "http://{{ip}}/_io?cmd=4&js=<0/1>&pkt=<packet> ",
+    "method": "GET",
+    "sortNum": 65000,
+    "created": "2023-05-10T14:50:52.500Z",
+    "modified": "2023-05-10T14:50:52.500Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "<0/1>",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "<packet>",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "130d0b42-c440-4e4d-8c7d-ffafc2cdda5e",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "SENT_FILES",
+    "url": "http://{{ip}}/_driveinfo?cmd=1&path=0:\\SENT",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2023-05-10T15:02:34.158Z",
+    "modified": "2023-05-10T15:09:02.115Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "path",
+        "value": "0:\\SENT",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "## Ottieni la lista dei file inviati o esportati\n\nSENT_FILES : la lista viene restituita in un oggetto JSON array “filelist”\n\n---\n\n\n```json\n{ \"fileslist\": [\n { \"name\":\"Z_0054_Z0286_220105_164426_S.XML\", \"type\":\"File\", \"size\":3882, \n\"timestamp\":\"05-01-2022 16:44\" },\n { \"name\":\"Z_0054_Z0286_220105_164428_R.XML\", \"type\":\"File\", \"size\":3323, \n\"timestamp\":\"05-01-2022 16:44\" },\n { \"name\":\"Z_0000_Z0287_220110_094318_S.XML\", \"type\":\"File\", \"size\":3930, \n\"timestamp\":\"10-01-2022 09:43\" },\n { \"name\":\"L_220110_094236_0287_S.LOT\", \"type\":\"File\", \"size\":3906, \"timestamp\":\"10-01-\n2022 09:43\" }\n]}\n\n```\n---"
+  },
+  {
+    "_id": "f25944aa-c278-435c-a99e-51674aa482de",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "READ_EJ",
+    "url": "http://{{ip}}/_ejctl?cmd=0&fmt=0&line=1",
+    "method": "GET",
+    "sortNum": 100000,
+    "created": "2023-05-10T15:11:21.364Z",
+    "modified": "2023-05-10T15:15:02.134Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "0",
+        "isPath": false
+      },
+      {
+        "name": "fmt",
+        "value": "0",
+        "isPath": false
+      },
+      {
+        "name": "line",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "## READ_EJ : la lista viene restituita in un oggetto JSON array “lines”\n\nSENT_FILES : la lista viene restituita in un oggetto JSON array “filelist”\n\n---\n\n\nCiascun oggetto dell’array prevede i sottoattributi : “no” (numero linea), “text” (XX:riga \nsalvata – dove XX è un valore per utilizzi futuri).\n\n\nRisposta es.\n\n```json\n{ \"lines\":[\n{\"no\":23019,\"text\":\"01: SF20 \"},\n{\"no\":23020,\"text\":\"00: FIRMWARE DEBUG \"},\n{\"no\":23021,\"text\":\"00:- - - - - - - - - - - - - - - - - - - - - - - - \"},\n{\"no\":23022,\"text\":\"01: DOCUMENTO COMMERCIALE\"},\n{\"no\":23023,\"text\":\"01: di vendita o prestazione\"},\n{\"no\":23024,\"text\":\"C0:DESCRIZIONE IVA PREZZO(€)\"},\n{\"no\":23025,\"text\":\"00:REPAR-1 4% 12,55\"},\n{\"no\":23026,\"text\":\"00:\"},\n{\"no\":23027,\"text\":\"00:- - - - - - - - - - - - - - - - - - - - - - - - \"},\n{\"no\":23028,\"text\":\"01:TOTALE COMPLESSIVO 12,55\"},\n{\"no\":23029,\"text\":\"01:di cui IVA 0,48\"},\n{\"no\":23030,\"text\":\"00:PAGAMENTO CONTANTE 12,55\"},\n{\"no\":23031,\"text\":\"00:IMPORTO PAGATO 12,55\"},\n{\"no\":23032,\"text\":\"00: 02/02/2022 14:03\"},\n{\"no\":23033,\"text\":\"00: DOCUMENTO N. 0328-0001\"},\n{\"no\":23034,\"text\":\"00: *** 8AMTN999526\"},\n{} ]}\n\n```\n---"
+  },
+  {
+    "_id": "cb1310a9-b260-4135-b274-c628d86f6b56",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "GETLIST",
+    "url": "http://{{ip}}/_driveinfo?cmd=1&path=1:\\PDF",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2023-05-10T15:17:04.522Z",
+    "modified": "2023-05-10T15:20:00.983Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "path",
+        "value": "1:\\PDF",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "# Lettura Documenti Commerciali dematerializzati / Scontrino Elettronico,\n\n## Recupero della lista di tutti gli scontrini elettronici presenti nella macchina, la reply è in formato JSON\n\n\n"
+  },
+  {
+    "_id": "25cf99e1-ca54-4e33-9fb7-09e29cf74ea9",
+    "colId": "18c4c0b1-76e4-4d89-a060-da9fcd26dfae",
+    "containerId": "",
+    "name": "GETFILE",
+    "url": "http://{{ip}}/Z_0008_Z0008_230511_163328_R",
+    "method": "GET",
+    "sortNum": 120000,
+    "created": "2023-05-10T15:21:06.469Z",
+    "modified": "2023-05-11T14:37:59.112Z",
+    "headers": [],
+    "params": [],
+    "tests": [],
+    "docs": "# Lettura Documenti Commerciali dematerializzati / Scontrino Elettronico,\n\n## Download del file selezionato\n\n### I file sono visibile anche tramite interfaccia Web collegandosi all’ip della macchina nella sezione “Visualizza file”, all’interno della cartella “PDF”.\n\n\n*AAAAMMGG directory con il nome corrispondente alla data di generazione nel formato Anno \n(AAAA) Mese (MM) Giorno (GG)\n**Dove “filename” (nnnnnnnnn_Zxxxx_yyyy.pdf)\nnnnnnnnnn : codice scontrino elettronico a 9 cifre (numerico)\nxxxx : numero chiusura giornaliera\nyyyy : numero di documeno emesso\nEs. http://192.168.1.1/1:/PDF/20220101/123456789_Z0001_0001.pdf\nConsente il recupero del file 123456789_Z0001_0001.pdf generato in data 1 Gennaio 2022 \ndal registratore fiscale con indirizzo 192.168.1.1.\n"
+  },
+  {
+    "_id": "becbd3bd-1160-48be-a3e4-e0091e952db4",
+    "colId": "9e23612b-e75b-4b7c-a5c0-867c3036648c",
+    "containerId": "",
+    "name": "PAGAMENTO E CHIUSURA DOCUMENTO",
+    "url": "http://{{ip}}/_io?cmd=4&js=1&pkt=5%2F1%2F1.00%2F%2F%2F%2FPE%2F%2F%2F",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-05-11T09:42:16.070Z",
+    "modified": "2023-05-11T14:23:01.099Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "5%2F1%2F1.00%2F%2F%2F%2FPE%2F%2F%2F",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "3%2FS%2FCaffe%2F1%2F1%2F0.80%2F1%2F\n\n3- request code\n\n'S' per le operazioni di \nvendita positiva\n'V' per le operazioni di\ninserimento linee in un \ndocumento commerciale di \nANNULLO\n'R' per le operazioni di\nstorno\n'N' per le operazioni di \ninserimento linee in un \ndocumento commerciale di RESO\n‘M’ per le operazioni di \ngestione dei BUONI MONOUSO\n‘B’ per le operazioni di \ngestione dell’ACCONTO\n‘G’ per la gestione delle \noperazioni di OMAGGIO\n\nFIELD 3 Descrizione STRING 1-30 \nchars\nDescrizione dell’operazione\n\nFIELD 4 Descrizione \naggiuntiva/estesa\nSTRING 0-30 \nchars\nLinea descrittiva aggiuntiva \nstampata sotto alla linea \ndescrittiva principale. \n(field facoltativo)\n\n"
+  },
+  {
+    "_id": "619ee60b-d847-4e75-9a35-9a8678145217",
+    "colId": "9e23612b-e75b-4b7c-a5c0-867c3036648c",
+    "containerId": "",
+    "name": "SCONTO / MAGGIORAZIONE",
+    "url": "http://{{ip}}/_io?cmd=4&js=1&pkt=4%2F10.00%2F%2Faddit.descript%2F0%2F0%2F0%2F",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-05-11T09:47:45.899Z",
+    "modified": "2023-05-11T09:50:30.898Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "4%2F10.00%2F%2Faddit.descript%2F0%2F0%2F0%2F",
+        "isPath": false
+      }
+    ],
+    "tests": [],
+    "docs": "3%2FS%2FCaffe%2F1%2F1%2F0.80%2F1%2F\n\n3- request code\n\n'S' per le operazioni di \nvendita positiva\n'V' per le operazioni di\ninserimento linee in un \ndocumento commerciale di \nANNULLO\n'R' per le operazioni di\nstorno\n'N' per le operazioni di \ninserimento linee in un \ndocumento commerciale di RESO\n‘M’ per le operazioni di \ngestione dei BUONI MONOUSO\n‘B’ per le operazioni di \ngestione dell’ACCONTO\n‘G’ per la gestione delle \noperazioni di OMAGGIO\n\nFIELD 3 Descrizione STRING 1-30 \nchars\nDescrizione dell’operazione\n\nFIELD 4 Descrizione \naggiuntiva/estesa\nSTRING 0-30 \nchars\nLinea descrittiva aggiuntiva \nstampata sotto alla linea \ndescrittiva principale. \n(field facoltativo)\n\n"
+  }
+]
