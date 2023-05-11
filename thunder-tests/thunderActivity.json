@@ -1,0 +1,126 @@
+[
+  {
+    "_id": "4ca156cb-6bfc-4482-9399-c84e9cc2efdd",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://192.168.1.180/_io?cmd=4&js=0&pkt=3%2FS%2FTest%20Articolo%201%2F%2F1% 2F1%2F1%2F",
+    "url": "http://192.168.1.180/_io?cmd=3&js=1&pkt=3%2FS%2FTest%20Articolo%201%2F%2F1% 2F1%2F1%2F",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-09T13:50:13.470Z",
+    "modified": "2023-05-10T10:10:40.137Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "3",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "3%2FS%2FTest%20Articolo%201%2F%2F1% 2F1%2F1%2F",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "23b78d23-17e2-4fbc-a775-90d568036afe",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://192.168.1.180/_io?cmd=4&js=0&pkt=3%2FS%2FTest%20Articolo%201%2F%2F1% 2F1%2F1%2F Copy",
+    "url": "http://192.168.1.180/_io?cmd=3&js=1&pkt=3%2FS%2FTest%20Articolo%201%2F%2F1% 2F1%2F1%2F",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-09T13:50:13.470Z",
+    "modified": "2023-05-10T10:10:40.137Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "3",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "3%2FS%2FTest%20Articolo%201%2F%2F1% 2F1%2F1%2F",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "c1369fcc-d9dc-4a1b-80a7-3f81877210f3",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://192.168.1.180/_io?cmd=0",
+    "url": "http://192.168.1.180/_io?cmd=0",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-09T13:53:26.638Z",
+    "modified": "2023-05-09T13:53:26.638Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "0",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "f6fcecf6-5f4e-435b-bdac-df6dcd568ea6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://192.168.1.180",
+    "url": "http://192.168.1.180",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-09T13:57:43.778Z",
+    "modified": "2023-05-09T13:57:43.778Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "b869b661-4066-4dcf-9ee8-3dd693513f37",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://192.168.1.180/_io?cmd=4&js=0&pkt=a",
+    "url": "http://192.168.1.180/_io?cmd=4&js=1&pkt=a",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-10T10:06:40.163Z",
+    "modified": "2023-05-10T10:08:23.528Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "cmd",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "js",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "pkt",
+        "value": "a",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]
