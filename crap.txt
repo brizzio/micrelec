@@ -1,0 +1,89 @@
+FIELD 1 Request code STRING Fixed, 1 character Carattere  ‘5’  per  questo commando. 
+FIELD 2 Numero/Codice di pagamento  da 1 a 20 per firmware 
+
+FIELD 3 Importo pagamento AMOUNT 
+
+FIELD 4 Descrizione pagamento STRING 0-20 chars 
+Campo di descrizione pagamento, non utilizzabile con firmware compatibili XML v7 in quanto la descrizione è imposta da normativa ed eventualmente recuperata automaticamente dalla configurazione del numero di pagamento dichiarato. (field facoltativo) 
+
+
+FIELD 5 Dati POS offline INTEGER 20 Se la forma di pagamento è di tipo ‘POS Offline’ il campo 5 va  compilato  con  la  seguente struttura:DDMMYYYYhhmmssSSSSSS (D=giorno, M=mese, Y=anno, h=ora, m=minuti, s=secondi, S=STAN) 
+In alternativa al valore STAN, per la selezione del CANALE è necessario impostare il codice STAN al valore ‘000000’, verrà così  associata  la  descrizione del pagamento stesso come stringa che identifica il CANALE. 
+
+FIELD 6 Descrizione estesa  pagamento STRING 0-20 chars Campo di descrizione estesa pagamento, non utilizzabile con firmware compatibili XML v7 in quanto la descrizione è imposta da normativa ed eventualmente recuperata 
+automaticamente dalla  configurazione del numero di pagamento dichiarato. (field facoltativo) 
+
+FIELD 7 Tipologia pagamento STRING 0 or 2 chars 
+PC: Contanti 
+PE: Elettronico 
+NR: Non riscosso 
+SP: Sconto a Pagare 
+Se dichiarata dovrà corrispondere alla configurazione di tipologia del  pagamento  dichiarato  nel field 2, in caso contrario il comando restituirà un errore. Se non dichiarata varrà utilizzata la tipologia di 
+pagamento configurata nel numero  di  pagamento  indicato nel field 2. (field facoltativo) 
+
+FIELD 8 Dettaglio Tipologia STRING 0-3 char  Se tipologia pagamento (field7)  è  ‘NR’  Non  riscosso 
+sono disponibili questi tipi di dettaglio 
+AL: Altro, Beni 
+SE: Servizi 
+TKT: Ticket 
+TKC: Buono Celiachia 
+SF: Seguirà Fattura 
+SS: DCR a SSN 
+ 
+Se tipologia pagamento (field7) è ‘SP’ Sconto a Pagare sono disponibili questi tipi di dettaglio 
+SP: Sconto a Pagare 
+BM: Buono multiuso 
+Se dichiarato dovrà corrispondere alla configurazione  del  dettaglio  tipologia pagamento del pagamento dichiarato nel field 2, in caso contrario il comando restituirà un errore. Se non dichiarato varrà utilizzato il dettaglio tipologia pagamento configurato nel numero di pagamento indicato nel field 2. (field facoltativo) 
+
+FIELD 9 Quantità Ticket INTEGER 0-2 digit 
+Numero  dei  Tagliandi  Ticket ritirati.  Applicabile  solo  se  Tipologia pagamento  (field7)  =  NR  e Dettaglio  pagamento  (field8)= TKT o TKC. Se non dichiarata, la quantità ticket viene considerata unitaria  per  ogni  comando  di pagamento ‘5’ inviato. (field facoltativo)
+
+
+
+
+----------------------------------------------
+
+
+FIELD 1 Request code =  ‘5’  
+FIELD 2 Numero/Codice di pagamento  = 1
+
+FIELD 3 Importo pagamento AMOUNT 
+
+FIELD 4 Descrizione pagamento ='' ?
+
+FIELD 5 Dati POS offline = 0 ?
+
+
+FIELD 6 Descrizione estesa  pagamento = "" ?(field facoltativo) 
+
+FIELD 7 Tipologia pagamento = 'PC' ?
+
+FIELD 8 Dettaglio Tipologia = "" STRING 0-3 char  Se tipologia pagamento (field7)  è  ‘NR’  Non  riscosso 
+sono disponibili questi tipi di dettaglio 
+AL: Altro, Beni 
+SE: Servizi 
+TKT: Ticket 
+TKC: Buono Celiachia 
+SF: Seguirà Fattura 
+SS: DCR a SSN 
+ 
+Se tipologia pagamento (field7) è ‘SP’ Sconto a Pagare sono disponibili questi tipi di dettaglio 
+SP: Sconto a Pagare 
+BM: Buono multiuso 
+Se dichiarato dovrà corrispondere alla configurazione  del  dettaglio  tipologia pagamento del pagamento dichiarato nel field 2, in caso contrario il comando restituirà un errore. Se non dichiarato varrà utilizzato il dettaglio tipologia pagamento configurato nel numero di pagamento indicato nel field 2. (field facoltativo) 
+
+FIELD 9 Quantità Ticket = '' ?  INTEGER 0-2 digit 
+Numero  dei  Tagliandi  Ticket ritirati.  Applicabile  solo  se  Tipologia pagamento  (field7)  =  NR  e Dettaglio  pagamento  (field8)= TKT o TKC. Se non dichiarata, la quantità ticket viene considerata unitaria  per  ogni  comando  di pagamento ‘5’ inviato. (field facoltativo)
+
+
+----------------------------------------------------------------------------
+
+field_1_request_code =  ‘5’  
+field_2_payment_code = 1
+field_3_payment_amount = calculated
+field_4_payment_description ='' ?
+field_5_offline_pos_data = 0 ?
+field_6_extended_payment_description = "" ?(field facoltativo) 
+field_7_payment_typology = 'PC' ?
+field_8_typology_detail = "" 
+field_9_ticket_quantity= '' ? 

@@ -1,0 +1,121 @@
+Super simple PDF printing service with node.js.
+How to write a RESTful http service to print PDFs on any local or network printer using Javascript and node.js to automate your logistics (e.g. shipping labels) or any other process that still needs some paper.
+Philipp Bauknecht
+medialesson
+Philipp Bauknecht
+
+·
+Follow
+
+Published in
+medialesson
+
+·
+2 min read
+·
+Feb 28, 2021
+100
+
+
+3
+
+
+
+
+Prerequisites
+NodeJS free download here: https://nodejs.org/en/
+Visual Studio Code (or your favorite code editor), free download here: https://code.visualstudio.com/
+Step by step
+Let’s start by creating a new node project using npm (the node package manager) in an empty folder:
+
+npm init
+We are going to use two packages to write our service:
+
+Express, a fast and minimalist web framework for Node.js that allows us to write a simple http endpoint to receive a post request with a pdf file and
+pdf-to-printer, a utility to print PDF files from Node.js
+So we need to install these packages using npm:
+
+npm i express --save
+npm i pdf-to-printer --save
+We also need to set the package type to module to be able to load ES modules in our app. So the final package.json will look like this:
+
+{
+  "name": "pdf-printing-service",
+  "version": "1.0.0",
+  "description": "A simple service to print PDF documents",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Philipp Bauknecht",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pdf-to-printer": "^1.7.0"
+  }
+}
+
+
+Now we can setup our one api endpoint to call our service as a http post request in a new file index.js:
+
+import express from "express";
+
+const app = express();
+const port = 3000;
+
+app.post('', express.raw({ type: 'application/pdf' }), async(req, res) => {
+
+    // here the magic will happen...
+  
+    res.status(204);
+    res.send();
+});
+
+app.listen(port, () => {
+    console.log(`PDF Printing Service listening on port ${port}`)
+});
+view rawindex.js hosted with ❤ by GitHub
+
+So we setup a new express instance, define a post handler for the root route and configure it to accept raw binary data of content-type “application/pdf”. This handler will finally return the success status code 204 (no content). We start the web server with the listen method on the defined port 3000.
+
+In the final step we implement actual printing. Therefore we need the following steps:
+
+check for a querystring with a desired printer name to print to
+create a temporary file path to save the pdf to
+Save the pdf file from the request
+Print
+Delete the temporary pdf file
+So here is the full implementation:
+
+import express from "express";
+import ptp from "pdf-to-printer";
+import fs from "fs";
+import path from "path";
+
+const app = express();
+const port = 3000;
+
+app.post('', express.raw({ type: 'application/pdf' }), async(req, res) => {
+
+    const options = {};
+    if (req.query.printer) {
+        options.printer = req.query.printer;
+    }
+    const tmpFilePath = path.join(`./tmp/${Math.random().toString(36).substr(7)}.pdf`);
+
+    fs.writeFileSync(tmpFilePath, req.body, 'binary');
+    await ptp.print(tmpFilePath, options);
+    fs.unlinkSync(tmpFilePath);
+
+    res.status(204);
+    res.send();
+});
+
+app.listen(port, () => {
+    console.log(`PDF Printing Service listening on port ${port}`)
+});
+
+
+Conclusion
+I’m still surprised how simple things are in the Node.js world coming from the .NET universe. I tried to do this with .NET Core first and gave up as there were only some commercial libraries available and I would have needed so much more code. This Node.js app can now easily be deployed into a autostart process on a local windows server using pm2 or simply run on a Raspberry Pi somewhere in the local network.

@@ -122,5 +122,155 @@
       }
     ],
     "tests": []
+  },
+  {
+    "_id": "d6502d8e-bb0b-4bdf-b2d1-7f71ee8f03a7",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.cepaberto.com/api/v3/cep?cep=01418100",
+    "url": "https://www.cepaberto.com/api/v3/cep?cep=01418100",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T09:00:43.048Z",
+    "modified": "2023-05-27T09:00:43.048Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token token=599d2b9031a72b73a08eb7bee71b1497"
+      }
+    ],
+    "params": [
+      {
+        "name": "cep",
+        "value": "01418100",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "d0289bd0-e99e-438e-a5e8-11965f18e40a",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.cepaberto.com/api/v3/cep?cep=01418101",
+    "url": "https://www.cepaberto.com/api/v3/cep?cep=01418101",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T09:01:29.062Z",
+    "modified": "2023-05-27T09:01:29.062Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token token=599d2b9031a72b73a08eb7bee71b1497"
+      }
+    ],
+    "params": [
+      {
+        "name": "cep",
+        "value": "01418101",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "2ace6e36-3c19-4007-8e52-40712ada2597",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.cepaberto.com/api/v3/cep?cep=01418102",
+    "url": "https://www.cepaberto.com/api/v3/cep?cep=01418102",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T09:01:35.263Z",
+    "modified": "2023-05-27T09:01:35.263Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token token=599d2b9031a72b73a08eb7bee71b1497"
+      }
+    ],
+    "params": [
+      {
+        "name": "cep",
+        "value": "01418102",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "182cc146-e73d-4018-bb4d-eeceed6de81e",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.cepaberto.com/api/v3/cep?cep=01418090",
+    "url": "https://www.cepaberto.com/api/v3/cep?cep=01418090",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T09:01:51.820Z",
+    "modified": "2023-05-27T09:01:51.820Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token token=599d2b9031a72b73a08eb7bee71b1497"
+      }
+    ],
+    "params": [
+      {
+        "name": "cep",
+        "value": "01418090",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "a69eedc3-ea7f-43e4-9b23-812b166f817e",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.cepaberto.com/api/v3/cep?cep=01418092",
+    "url": "https://www.cepaberto.com/api/v3/cep?cep=01418092",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T09:01:57.081Z",
+    "modified": "2023-05-27T09:01:57.081Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token token=599d2b9031a72b73a08eb7bee71b1497"
+      }
+    ],
+    "params": [
+      {
+        "name": "cep",
+        "value": "01418092",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "d83ad0a5-a6f5-4590-a0fc-d3b0678ac1aa",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.cepaberto.com/api/v3/cep?cep=01418094",
+    "url": "https://www.cepaberto.com/api/v3/cep?cep=01418094",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-27T09:02:02.210Z",
+    "modified": "2023-05-27T09:02:02.210Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Token token=599d2b9031a72b73a08eb7bee71b1497"
+      }
+    ],
+    "params": [
+      {
+        "name": "cep",
+        "value": "01418094",
+        "isPath": false
+      }
+    ],
+    "tests": []
   }
 ]
